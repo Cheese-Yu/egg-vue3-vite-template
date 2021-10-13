@@ -1,0 +1,64 @@
+{
+  "name": "bplus-track-server",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "dayjs": "^1.10.7",
+    "egg": "^2.15.1",
+    "egg-mongoose": "^3.3.1",
+    "egg-redis": "^2.4.0",
+    "egg-scripts": "^2.11.0",
+    "egg-view-nunjucks": "^2.3.0",
+    "lodash": "^4.17.21",
+    "vue": "^3.2.16",
+    "vue-router": "^4.0.11"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "egg-mock": "^3.21.0",
+    "eslint": "^6.2.0",
+    "eslint-config-egg": "^7.1.0",
+    "eslint-plugin-jsdoc": "^15.12.2",
+    "eslint-plugin-vue": "^7.19.1",
+    "i": "^0.3.7",
+    "less": "^4.1.2",
+    "npm": "^8.0.0",
+    "vite": "^2.6.4"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-bplus-track-server",
+    "stop": "egg-scripts stop --title=egg-server-bplus-track-server",
+    "dev": "egg-bin dev",
+    "web:dev": "vite web",
+    "web:build": "vite build web",
+    "web:serve": "vite preview web",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "10"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "MIT"
+}
